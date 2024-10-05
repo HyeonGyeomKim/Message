@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.container .topBox {
+    position: relative;
+    width: 100%;
+    height: 105px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: red; */
+    /* background: #f5f5f5; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+
+.profile {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileBox {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-image: url('profile.png');
+    background-size: 48px;
+}
+
+.profile .nameBox {
+    position: absolute;
+    top: 80px;
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.container .bottomBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 0 20px;
+}
+
+
+.textBox {
+    display: flex;
+    justify-content: center;
+}
+
+.textBox span {
+    font-size: 0.8rem;
+    margin-top: 20px;
+    position: relative;
+    height: 40px;
+    padding: 20px;
+    background: #E5E5EA;
+    border-radius: 25px;
+    color: black;
+    float: left;
+    display: flex;
+    justify-content: centrer;
+    align-items: center;
+}
+
+.textBox span:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    bottom: -2px;
+    left: -7px;
+    height: 20px;
+    border-left: 20px solid #E5E5EA;
+    border-bottom-right-radius: 16px 14px;
+    -webkit-transform: translate(0, -2px);
+}
+
+.textBox span:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    bottom: -2px;
+    left: 4px;
+    width: 26px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+    -webkit-transform: translate(-30px, -2px);
+}

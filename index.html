@@ -1,0 +1,135 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="topBox">
+            <div class="backButton">
+                <box-icon name='chevron-left' color='#3478f6'></box-icon>
+            </div>
+            <div class="profile">
+                <div class="profileBox"></div>
+                <div class="nameBox">
+                    <span id="name"></span> <!-- ID 추가 -->
+                </div>
+            </div>
+            <div class="movie">
+                <box-icon></box-icon>
+            </div>
+        </div>
+        <div class="bottomBox">
+            <div class="textBox">
+                <span id="message"></span> <!-- ID 추가 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script>
+        const text = [
+            {
+                name: "엄마"
+                , lines: [
+                    "보고시ㅃ어"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "이번주에 오면 자두 복숭아 수박 있어"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "엄마가 💚 사랑해"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "어디야"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "소중한. 이지구에하나뿐인 착한엄마딸이자나"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "엄만 네가무얼하던 행복한사람이기만을 바란당"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "분명히 너와 함께할 친구가 있을 거야"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "첫 인상으로 다 좌우되는 건 아니지!"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "되도록 긍정적으로 생각하기❤️"
+                ]
+            }
+            , {
+                name: "엄마"
+                , lines: [
+                    "밥은 챙겨먹고 다니는거지?"
+                ]
+            }
+            , {
+                name: "형"
+                , lines: [
+                    "힘들면 언제든지 연락해"
+                ]
+            }
+            , {
+                name: "아빠"
+                , lines: [
+                    "남은기간 열심히 해봐... 후회없게"
+                ]
+            }
+            , {
+                name: "아빠"
+                , lines: [
+                    "안된다고 실망할 필요도 없어"
+                ]
+            }
+            , {
+                name: "아빠"
+                , lines: [
+                    "사람은 모두 지구에 잠깐 여행온거야"
+                ]
+            }
+        ];
+
+        // 랜덤으로 선택하는 함수
+        function getRandomItem(arr) {
+            return arr[Math.floor(Math.random() * arr.length)];
+        }
+
+        // DOM 요소 선택
+        const nameElement = document.getElementById("name");
+        const messageElement = document.getElementById("message");
+
+        // 랜덤으로 이름과 메시지 설정
+        const randomEntry = getRandomItem(text);
+        nameElement.textContent = randomEntry.name;
+        messageElement.textContent = getRandomItem(randomEntry.lines);
+    </script>
+</body>
+</html>
